@@ -1,1 +1,20 @@
 
+spring:
+  application:
+    name: ks-central-integration
+  server:
+    port: 8080
+  datasource:
+    url: jdbc:mysql://demodb.cbw6eks20203.eu-north-1.rds.amazonaws.com:3306/kodespace
+    username: admin
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
